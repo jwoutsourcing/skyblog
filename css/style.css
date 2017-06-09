@@ -1,0 +1,340 @@
+
+/* TOP NAVBAR */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand>img {
+    padding: 7px 14px;
+}
+
+.navbar {
+    background:#FFFFFF;
+    margin-bottom: 0px;
+    border-bottom: 0px;
+    border-radius: 0px;
+    font-family: 'Starjedi';
+    font-size: 20px;
+}
+
+.nav.navbar-nav.navbar-right li a {
+    color: #FE5634;
+}
+
+.nav.navbar-nav.navbar-left{
+    color: #FE5634;
+}
+/* END TOP NAVBAR */
+
+
+/* FOOTER */
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #FFFFFF;
+    color: #7795A9;
+    font-family: 'Rebellion';
+    font-size: 10px;
+    text-shadow: 2px 2px 4px #FCD99B;
+    height: 25px;       /* sets max height.if change must edit body margin-bottom */
+}
+
+.fmargin-side {
+    margin-left: 15px;
+}
+
+/* END FOOTER */
+
+
+/* CONTAINERS */
+
+.sidenav {              /* side navbar sppecific */
+    padding-top: 25px;
+    min-height: 100%;
+    font-family: 'Rebellion';
+    font-size: 13px;
+    height: 100vh;
+    height: auto;
+}
+
+.row.content {          /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    height: 100vh;
+    height:auto;
+}
+
+.main_container {
+    height: 100vh;
+    overflow-y: scroll; /*enables scrollbar to left of main container. to remove set to hidden */ 
+    -ms-overflow-style: none;
+}
+
+.main_container::-webkit-scrollbar {
+  display: none; 
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+body {
+    margin-bottom: 25px; /* Margin bottom by footer height */
+    overflow: hidden;
+    overflow-x: hidden;
+}
+
+@media only screen and (max-width: 768px){ /* On small screens, set height to 'auto' for sidenav and grid */
+    .sidenav {
+        height: auto;
+        padding: 0px;
+}   }
+
+/* END CONTAINERS*/
+
+/* LOGIN + SIGNUP + CONTACT + POST SPECIFIC CSS */
+.lcontainer {
+    margin-top:80px;
+}
+
+.lform-container {
+    width:400px;
+    margin:0 auto;
+    background:#FFFFFF;
+    padding: 25px;
+    box-shadow: 0px 0px 2px rgba(0,0,0,0.4);
+    border-radius:3px;
+}
+
+.pcontainer {
+    margin-top:25px;
+}
+
+.pform-container {
+    width:600px;
+    margin:0 auto;
+    background:#FFFFFF;
+    padding: 25px;
+    box-shadow: 0px 0px 2px rgba(0,0,0,0.4);
+    border-radius:3px;
+}
+
+label {
+    font-family: 'Rebellion';
+    color: #00a9d1;
+}
+/* LOGIN + SIGNUP + CONTACT SPECIFIC CSS */
+
+/* FAQ  CSS*/
+
+.body {
+    width: 50%;     
+    height: 100%;       /* Force the body to fill the entire screen */
+    overflow: hidden;   /* Hide elements that flow outside the viewable space */
+    background: #000;   /* Black background for the screen */
+}
+
+.star-wars {
+    display: flex;      /* Flexbox to center the entire element on the screen */
+    justify-content: center;
+    height: 800px;      /* This is a magic number based on context in which this is used and effects the perspective */
+    perspective: 400px; /* This allows us to transform the text on a 3D plane, and is somewhat a magic number */
+    color: #feda4a;
+    font-family: 'Rebellion';
+    font-size: 700%;
+    font-weight: 600;
+    letter-spacing: 4px;
+    line-height: 150%;
+    text-align: justify;
+    text-shadow: 2px 2px 4px #F17F4A;
+}
+
+.crawl {
+    position: relative;             /* Position the element so we can adjust the top property in the animation */
+    transform-origin: 50% 100%;     /* Defines the skew origin at the very center when we apply transforms on the animation */
+    animation: crawl 120s linear;    /* Adds the crawl animation, which plays for one minute */
+}
+
+@keyframes crawl {                                      /* We're calling this animation "crawl" */
+    0% {
+        top: 0;                                         /* The element starts below the screen */
+        transform: rotateX(20deg) translateZ(0);        /* Rotate the text 20 degrees but keep it close to the viewer */
+    }
+    100% { 
+        top: -6000px;                                   /* A magic number, using a big makes sure the text is fully off screen at end */
+        transform: rotateX(25deg) translateZ(-2500px);  /* Slightly increasing rotation at the end and moving text far away from viewer */
+    }
+}
+
+.fade {
+    position: relative;
+    width: 100%;
+    min-height: 60vh;
+    top: -25px;
+    background-image: linear-gradient(0deg, transparent, black 75%);
+    z-index: 1;
+}
+
+.crawl:hover{
+    animation-play-state: active;
+}
+
+.hovering:hover {
+ -moz-animation-play-state: paused;
+ -webkit-animation-play-state: paused;
+ animation-play-state: paused;
+}
+
+/* END FAQ CSS */
+
+/* BUTTONS */
+
+/*previous - next .... not currently in use*/
+.pager {
+    margin-bottom: 50px;
+    margin-top: 50px;
+    font-family: 'Rebellion';
+    font-size: 11px;
+    text-align: center;
+}
+.pager > li > a {
+    width: 100px;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 30px;
+}
+
+.pgr-fixed {
+    position: fixed;
+    bottom:0;
+ }
+
+/* blog comment */
+.btn-blog {
+    border-radius: 5px;
+    margin-top: 5px;
+    background-color: #FFFFFF;
+    border: 1px solid #000000;
+    margin-bottom:5px;
+}
+/* search button not currently in use*/
+.search_btn{
+    border-radius: 5px;
+    margin-top: 15px;
+    background-color: #0099ff;
+    border: 1px solid #000000;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 10px;
+    width: 50px;
+    padding: 0;
+}
+
+.submit_button{
+    background-color: rgba(245, 245, 245, .5);
+    border: 2px solid #415882;
+    border-radius: 25px;
+    color: #415882;
+}
+
+.sign_button{
+    background-color: rgba(245, 245, 245, .5);
+    border: 2px solid #4C525A;
+    border-radius: 25px;
+    color: #D2380A;
+}
+
+/* END BUTTONS */
+
+/* FONTS, COLOURS AND COLOUR EFFECTS*/
+
+@font-face {
+    font-family: Rebellion;
+    src: url('BlogPHP/fonts/Rebellion.otf');
+}
+.rebellion {
+    font-family: Rebellion;
+}
+
+@font-face {
+    font-family: Starjedi;
+    src: url('BlogPHP/fonts/Starjedi.ttf')format("truetype");
+}
+
+.starjedi {
+    font-family: Starjedi;
+}
+
+.font9{
+    font-size: 9px;
+}
+
+.font12{
+    font-size: 12px;
+}
+
+.font20{
+    font-size: 20px;
+}
+
+.light_orange {
+    color: #F17F4A;
+}
+
+.dark_orange { 
+    color: #D2380A;
+}
+
+.blue_grey {
+    color: #7795A9;
+}
+
+.dark_blue{
+    color: #325582;
+}
+
+.black-background{
+    background-color:#000000;
+}
+
+.white-background{
+    background-color:#FFFFFF;
+}
+
+.black {
+    color: #000000;  
+}
+
+.dark_grey{
+    color: #4C525A;
+}
+.transparent{    
+    background-color: rgba(245, 245, 245, .5);
+}
+
+.shadow{
+    text-shadow: 2px 2px 4px #F17F4A;
+}
+
+.date-font {
+    font-size: 80%
+}
+
+.font90 {
+    font-size: 90%
+}
+
+/* END FONTS, COLOURS AND COLOUR EFFECTS*/
+
+/* IMAGE RELATED */
+/* not working for now but should do rather than call inline */
+.index_main{
+background: url("imgs/background/Reybackground.jpg") no-repeat center center;
+-webkit-background-size: 100% auto;
+-moz-background-size: 100% auto;
+-o-background-size: 100% auto;
+ background-size: 100% auto;
+}
